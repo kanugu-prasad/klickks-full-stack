@@ -11,7 +11,7 @@ const Dashboard = ({ onLogout }) => {
 
   const checkAuthStatus = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/auth/me', {
+      const response = await axios.get(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/api/auth/me`, {
         withCredentials: true
       });
 
@@ -30,7 +30,7 @@ const Dashboard = ({ onLogout }) => {
 
   const handleLogout = async () => {
     try {
-      await axios.post('http://localhost:5000/api/auth/logout', {}, {
+      await axios.post(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/api/auth/logout`, {}, {
         withCredentials: true
       });
       onLogout();
