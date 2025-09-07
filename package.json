@@ -1,0 +1,19 @@
+{
+  "name": "klickks-auth-system",
+  "version": "1.0.0",
+  "description": "Full-stack authentication system with React and Node.js",
+  "scripts": {
+    "start": "cd backend && node server.js",
+    "build": "cd frontend && npm run build",
+    "install-backend": "cd backend && npm install",
+    "install-frontend": "cd frontend && npm install",
+    "install-all": "npm run install-backend && npm run install-frontend"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "keywords": ["react", "nodejs", "authentication", "sqlite", "express"],
+  "author": "Klickks Assignment",
+  "license": "MIT"
+}
